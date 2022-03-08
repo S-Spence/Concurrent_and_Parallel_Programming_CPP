@@ -1,3 +1,15 @@
+# Ignore all (this is to ignore binaries)
+*
+
+# Unignore all with extensions
+!*.*
+
+# Unignore all dirs
+!*/
+
+# Unignore make files
+!Makefile
+
 build/
 
 .vscode/
