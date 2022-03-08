@@ -15,14 +15,15 @@ void vegetable_chopper(const char* name) {
 }
 
 int main() {
-    /* Errors in these functions
-    std::thread olivia(vegetable_chopper, "Olivia");
-    std::thread barron(vegetable_chopper, "Barron");
-    
-	printf("Barron and Olivia are chopping vegetables...\n");
+    // Initialize threads
+    std::thread sarah(vegetable_chopper, "Sarah");
+    std::thread pat(vegetable_chopper, "Pat");
+    // Sleep for one second 
+	printf("Sarah and Pat are chopping vegetables...\n");
     std::this_thread::sleep_for(std::chrono::seconds(1));
+    // Set chopping to false
     chopping = false;
-    barron.join();
-    olivia.join();
-    */
+    // Wait for the first thread to finish
+    sarah.join();
+    pat.join();
 }
